@@ -21,11 +21,11 @@ export class App extends Component {
     }
   }
 
-   componentWillUnmount() {
+  componentWillUnmount() {
     if (!this.state.contacts.length) {
-      localStorage.removeItem('contacts');
-      console.log('DELETE');
+      localStorage.removeItem('contacts');///не понимаю почему не работает
     }
+
   }
 
   isContactInState = ({ name, number }) =>
