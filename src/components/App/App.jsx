@@ -20,13 +20,13 @@ export class App extends Component {
       this.setState({ contacts: JSON.parse(localStorage.getItem('contacts')) });
     }
   }
-
-  componentWillUnmount() {
-    if (!this.state.contacts.length) {
-      localStorage.removeItem('contacts');///не понимаю почему не работает
-    }
-
-  }
+  
+  // не работает
+  // componentWillUnmount() {
+  //   if (!this.state.contacts.length) {
+  //     localStorage.removeItem('contacts');
+  //   }
+  // }
 
   isContactInState = ({ name, number }) =>
     !!this.state.contacts.filter(({ name: prevName, number: prevNumber }) => {
